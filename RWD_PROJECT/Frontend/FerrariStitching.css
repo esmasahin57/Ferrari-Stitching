@@ -1,0 +1,397 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000; /* Schwarzer Hintergrund */
+    color: #fff; /* Weiße Schriftfarbe */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    background-color: #00000000;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    max-height: 50px; /* Deine bestehende Größe */
+    display: block;      /* Wichtig: Macht das Bild zu einem Blockelement */
+    /* Das Ergebnis ist, dass es mittig ist */
+}
+
+.logo-container {
+    /* Zentriert das Logo horizontal */
+    flex-grow: 1; /* Nimmt so viel Platz wie möglich ein */
+    display: flex;
+    justify-content: center;
+}
+ 
+.burger-menu {
+    position: relative;
+}
+
+.burger-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Wird später für mobile Ansichten eingeblendet */
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: transform 0.3s ease-out; /* NEU: Für sanfte Animation */
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #FF2800; /* Ferrari Rot für Hover-Effekt */
+}
+
+/* Close Button für Mobile-Menü - angepasst ans Wireframe */
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.close-btn-container {
+    display: none;
+}
+
+/* Burger-Menü für kleinere Bildschirme - angepasst ans Wireframe */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        height: 100vh;
+        text-align: left;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 80px 30px 0;
+    }
+
+    .menu li {
+        margin: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 15px;
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
+    }
+
+    .menu li a {
+        font-size: 1.2em;
+        padding: 5px 0;
+        display: block;
+    }
+
+    .burger-icon {
+        display: block;
+        z-index: 1001;
+    }
+
+    #menu-toggle:checked + .burger-icon + .menu {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: none; /* Versteckt die Checkbox */
+    }
+
+    .logo-container {
+        flex-grow: 0; /* Logo behält seine Größe */
+    }
+    
+    .close-btn {
+        display: block;
+    }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Vollbild-Höhe wie im Wireframe */
+    max-height: 800px;
+}
+
+.image-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.image-slider img.active {
+    opacity: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2em;
+    padding: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333;
+}
+
+.content-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #ffffff; /* Ferrari Rot für Überschriften */
+    text-transform: uppercase; /* Wie im Wireframe */
+}
+
+.content-section .flex-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-container {
+    flex: 1;
+}
+
+.text-container p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Footer-Styling */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 30px;
+}
+
+.footer-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 200px;
+}
+
+.footer-logo img {
+    max-height: 50px;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FF2800; /* Ferrari Rot */
+}
+
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    color: #ddd;
+}
+
+.footer-bottom {
+    background-color: #000;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        text-align: left;
+        padding: 30px 20px;
+    }
+    
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .text-container {
+        margin-top: 15px;
+        padding: 0;
+    }
+
+    .text-container h2 {
+        font-size: 1.8em;
+    }
+
+    .text-container p {
+        font-size: 1em;
+    }
+
+    .image-container {
+        margin-top: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-logo, .footer-links, .footer-contact {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-links li {
+        margin: 0 10px 10px;
+    }
+    
+    .contact-section {
+        padding: 30px 20px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        align-self: center;
+    }
+}
+
+/* Anpassungen für Desktop-Ansicht (größer als 768px) */
+@media (min-width: 769px) {
+    .content-section {
+        flex-direction: row;
+        text-align: left;
+        padding: 60px 50px;
+    }
+
+    .content-section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .image-container {
+        margin-top: 0;
+        display: block;
+        justify-content: unset;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+    
+    /* Animation für Bildübergänge */
+    .content-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .content-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
