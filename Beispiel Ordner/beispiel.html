@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Filo Rosso – Ferrari Stitching™</title>
+  <link rel="stylesheet" href="beispiel.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">  
+</head>
+<body>
+
+  <!-- Header / Landing -->
+  <header class="hero">
+    <img src="Logo-ohne-Hintergrund.png" alt="Logo" class="hero-logo" />
+    <img src="Erstes-Bild-erweitert-mobil.png" alt="Ferrari Nähmaschine" class="hero-image" />
+    <img src="Zweites-Bild-erweitert-mobil.png" alt="Ferrari Logo" class="hero-image" />
+    <img src="Naehmaschine-Anzug-mobil.jpg" alt="Anzug" class="hero-image" />
+
+    <h1 class="hero-title">IL FILO ROSSO</h1>
+    <p class="hero-subtitle">Erste Hochleistungs-Nähmaschine die Ferrari-Technologie mit Luxus und Handwerk verknüpft.</p>
+    <button class="menu-toggle" aria-label="Menü öffnen">☰</button>
+  </header>
+
+  <!-- Off-Canvas Navigation -->
+  <nav class="offcanvas-menu" id="offcanvas">
+    <button class="close-menu" aria-label="Menü schließen">✕</button>
+    <img src="Logo-ohne-Hintergrund.png" alt="Menü-Logo" class="offcanvas-logo" />
+    <ul>
+      <li><a href="#limited">LIMITED EDITION</a></li>
+      <li><a href="#technik">INNOVATIVE TECHNIK</a></li>
+      <li><a href="#aesthetik">ÄSTHETIK IM DETAIL</a></li>
+      <li><a href="#leistung">LEISTUNG</a></li>
+    </ul>
+  </nav>
+
+  <div id="overlay" class="offcanvas-overlay"></div>
+
+  <!-- LIMITED EDITION -->
+<section id="limited" class="section">
+  <h2>LIMITED EDITION</h2>
+  <div class="section-content">
+    <img src="Autogramm.jpg" alt="Limitierte Nähmaschine" />
+    <p>Die Ferrari Precision Stitching Limited Edition ist auf nur 100 Stück weltweit limitiert. Vollendet durch Enzo Ferraris Autogramm.</p>
+  </div>
+</section>
+
+<!-- INNOVATIVE TECHNIK -->
+<section id="technik" class="section">
+  <h2>INNOVATIVE TECHNIK</h2>
+  <div class="section-content reverse">
+    <p>Ultraschneller Nähmotor, inspiriert von Ferrari-Renntechnik und vom Ferrari V8-Motor.</p>
+    <img src="Naehmaschine-Touchbar.jpg" alt="Technische Details" />
+  </div>
+</section>
+
+  <!-- ÄSTHETIK IM DETAIL -->
+  <section id="aesthetik" class="section">
+    <h2>ÄSTHETIK IM DETAIL</h2>
+  </section>
+<section id="scroll-section" class="aesthetik-scroll-section">
+  <div class="sticky-carousel">
+    <img src="Frau-Naehmaschine.jpg" class="carousel-image" />
+    <img src="Frau-Naehmaschine-Detail.jpg" class="carousel-image" />
+    <img src="Frau-Naemaschine-Nadel.jpg" class="carousel-image" />
+    <img src="Naehmaschine-Touchbar.jpg" class="carousel-image" />
+  </div>
+</section>
+
+  <!-- LEISTUNG -->
+  <section id="leistung" class="section">
+    <h2>LEISTUNG</h2> <br>
+    <p>Die Ferrari Precision Stitching™ kombiniert kompromisslose Präzision mit kraftvoller Dynamik – inspiriert vom Herzstück jedes Ferrari: <strong>dem V8-Motor</strong>.</p> <br>
+    <p>Dank ihrer Hochleistungsantriebstechnik liefert sie sekundenschnelle Stichergebnisse und ein Näherlebnis, das an die Performance eines Supersportwagens erinnert – inklusive charakteristischem Klang.</p>
+  </section>
+
+  <!-- USP Section mit Flip Cards -->
+  <section class="usp-section">
+    <h2>Einzigartige Vorteile</h2>
+    <div class="usp-grid">
+
+      <div class="usp-card">
+        <div class="usp-card-inner">
+          <div class="card-front">Ferrari Technologie</div>
+          <div class="card-back">Inspiriert vom Ferrari Supersportwagen SF90 Stradale.</div>
+        </div>
+      </div>
+
+      <div class="usp-card">
+        <div class="usp-card-inner">
+          <div class="card-front">Material</div>
+          <div class="card-back">Carbonfaser-Gehäuse, gefrästes Aluminium, titanbeschichtete Präzisionsteile und edle Details aus Edelstahl.</div>
+        </div>
+      </div>
+
+      <div class="usp-card">
+        <div class="usp-card-inner">
+          <div class="card-front">Sounddesign</div>
+          <div class="card-back">Das kraftvolle Surren erinnert akustisch an den ikonischen Klang des Ferrari SF90 – präzise, dynamisch, unverkennbar.</div>
+        </div>
+      </div>
+
+      <div class="usp-card">
+        <div class="usp-card-inner">
+          <div class="card-front">Persönlich verewigt</div>
+          <div class="card-back">Jede Maschine trägt das eingravierte Original-Autogramm von Enzo Ferrari – als Zeichen höchster Exklusivität.</div>
+        </div>
+      </div>
+
+    </div>
+    <button class="cta-button">JETZT KAUFEN</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <ul>
+      <li><a href="#">Über uns</a></li>
+      <li><a href="#">Impressum</a></li>
+      <li><a href="#">Rechtliche Hinweise</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+    <p>© Ferrari Stitching™</p>
+  </footer>
+
+  <!-- JavaScript-Datei einbinden -->
+  <script src="beispiel.js"></script>
+</body>
+</html>
